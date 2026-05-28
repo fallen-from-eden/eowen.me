@@ -23,7 +23,7 @@ $ npm start
 Build artifacts:
 
 ```
-$ npm build run
+$ npm run build
 ```
 
 There is no automated deployment of modified site content at this time.
