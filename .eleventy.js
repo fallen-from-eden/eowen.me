@@ -2,25 +2,25 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("media");
-    eleventyConfig.addPassthroughCopy({ "favicon": "/" });
-    
-    eleventyConfig.ignores.add('README.md');
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("media");
+  eleventyConfig.addPassthroughCopy({ "favicon": "/" });
 
-    eleventyConfig.addFilter("formatDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toISODate();
-    });
+  eleventyConfig.ignores.add('README.md');
 
-    let markdownOptions = {
-        html: true,
-        breaks: true,
-        linkify: true
-    };
-    let markdownLib = new markdownIt(markdownOptions);
+  eleventyConfig.addFilter("formatDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toISODate();
+  });
 
-    markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n',
-    markdownLib.renderer.rules.table_close = () => '</table>\n</div>',
+  let markdownOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let markdownLib = new markdownIt(markdownOptions);
 
-    eleventyConfig.setLibrary("md", markdownLib);
+  markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n',
+  markdownLib.renderer.rules.table_close = () => '</table>\n</div>',
+
+  eleventyConfig.setLibrary("md", markdownLib);
 };
