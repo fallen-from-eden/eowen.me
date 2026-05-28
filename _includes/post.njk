@@ -4,14 +4,14 @@ layout: base.njk
 <article>
   <h1>{{ title }}</h1>
   <hr/>
-  <h2>
-    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time>
-  </h2>
-  <hr/>
+
+<pre>$ less posts/{{ page.fileSlug }}.md</pre>
 
 <!-- Begin content -->  
 {{ content | safe  }}
 <!-- End content -->
+
+<pre>$ exit</pre>
 
 </article>
 
