@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.ignores.add('README.md');
 
   eleventyConfig.addFilter("formatDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toISODate();
+    return DateTime.fromJSDate(dateObj).minus({hours:5}).toISODate();
   });
 
   let markdownOptions = {

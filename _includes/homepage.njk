@@ -5,24 +5,45 @@ layout: base.njk
 <header>
   <h1>{{ homepage.title }}</h1>
   <hr/>
-  {% set subtitle = homepage.subtitle %}
-  {% if subtitle %}<p id="subtitle">{{ subtitle }}</p>{% endif %}
+  <p id="subtitle">{{ homepage.subtitle }}</p>
   <hr/>
 </header>
 <main>
   <pre>$ less index.md</pre>
-  <p><b>Hello, my name is Eden.</b> Welcome to my professional journal and portfolio. I am a technical writer in North Carolina with experience in GNU/Linux, AsciiDoc, DITA, Markdown, documentation as code, and modular documentation practices.</p>
-  <p>Here you will find articles regarding technical writing, digital privacy, and digital accessibility.</p>
+  <p><strong>Hello, my name is Eden.</strong> Welcome to my professional journal and portfolio. I am a queer, non-binary technical writer in North Carolina with experience in GNU/Linux, AsciiDoc, DITA, Markdown, Git, documentation as code, and modular documentation practices.</p>
 
-<!-- Begin menu -->
-{% set entries = homepage.menu %}
+<ol>
+<!-- Begin posts menu -->
+<li>
+{% set entries = homepage.posts_menu %}
 {% include "menu.njk" %}
-<!-- End menu -->
+</li>
+<!-- End posts menu -->
+<li>
+<!-- Begin articles menu -->
+{% set entries = homepage.articles_menu %}
+{% include "menu.njk" %}
+</li>
+<!-- End articles menu -->
+  <li>
+    <ul>
+      <li><strong>Contact</strong></li>
+      <ul>
+        <li><a href="mailto:eden@eowen.me">eden@eowen.me</a></li>
+        <li><a href="sms:+1-919-290-5016">(919) 290-5016</a></li>
+        <ul>
+          <li><strong>Text only.</strong> Phone calls will not be answered.</li>
+        </ul>
+      </ul>
+    </ul>
+  </li>
+</ol>
 
 <pre>$ shutdown -h now</pre>
 </main>
 <footer>
   <hr/>
   <p>This site was built with <a href="https://www.11ty.dev/">Eleventy</a> based on the <a href="https://github.com/stopnoanime/11ty-no-style-please">11ty-no-style-please</a> template by Michał Birecki. Personal modifications were made by Eden Owen.</p>
-  <p>Content on this site is licensed with a <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal license</a>.</p>
+  <p>The source code for this site is licensed with the <a href="https://mit-license.org/">MIT license</a> and is <a href="https://github.com/fallen-from-eden/eowen.me">available on GitHub</a>.
+  <p>Articles on this site are licensed with a <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal license</a>.</p>
 </footer>

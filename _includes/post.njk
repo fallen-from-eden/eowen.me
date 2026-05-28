@@ -5,7 +5,7 @@ layout: base.njk
   <h1>{{ title }}</h1>
   <hr/>
 
-<pre>$ less posts/{{ page.fileSlug }}.md</pre>
+<pre>$ less {{ page.filePathStem }}.md</pre>
 
 <!-- Begin content -->  
 {{ content | safe  }}
