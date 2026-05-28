@@ -1,0 +1,33 @@
+{
+    "title": "Eden C. Owen",
+    "subtitle": "Minimalist technical writer, digital privacy and accessibility advocate.",
+    "menu": [
+        {
+            "title": "Posts",
+            "post_list": "post"
+        },
+        {
+            "title": "Contact",
+            "entries": [
+                {
+                    "title": "Text only. Calls will not be answered.",
+                    "entries": [
+                        {
+                            "title": "(919) 290-5042",
+                            "url": "tel:+1-919-290-5402"
+                        }
+                    ]
+                },
+                {
+                    "title": "Emails are welcome and preferred.",
+                    "entries": [
+                        {
+                            "title": "eden@eowen.me",
+                            "url": "mailto:eden@eowen.me"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<article>
+  <p class="post-meta">
+    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time>
+  </p>
+  
+  <h1>{{ title }}</h1>
+  
+  <hr/>
+  
+  {{ content | safe  }}
+</article>
+
+<footer>
+  <hr/>
+  <p><a href="/">Home.</a></p>
+</footer>
