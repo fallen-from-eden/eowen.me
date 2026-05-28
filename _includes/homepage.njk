@@ -3,15 +3,20 @@ layout: base.njk
 ---
 <header>
   <h1>{{ homepage.title }}</h1>
+  <hr/>
   {% set subtitle = homepage.subtitle %}
-  {% if subtitle %}
-    <h2>{{ subtitle }}</h2>
-  {% endif %}
+  {% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}
   <hr/>
 </header>
 <main>
-  {% set entries = homepage.menu %}
-  {% include "menu.njk" %}
+  <p><strong>Hello, my name is Eden.</strong> Welcome to my professional journal and portfolio. I am a technical writer with experience in GNU/Linux, AsciiDoc, DITA, and modular documentation practices.</p>
+  <p>Here you will find articles regarding technical writing, digital privacy, and digital accessibility. I hope you enjoy them!</p>
+
+<!-- Begin menu -->
+{% set entries = homepage.menu %}
+{% include "menu.njk" %}
+<!-- End menu -->
+
 </main>
 <footer>
   <hr/>

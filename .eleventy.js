@@ -4,6 +4,9 @@ const markdownIt = require("markdown-it");
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("media");
+    eleventyConfig.addPassthroughCopy({ "favicon": "/" });
+    
+    eleventyConfig.ignores.add('README.md');
 
     eleventyConfig.addFilter("formatDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toISODate();
@@ -16,7 +19,6 @@ module.exports = function(eleventyConfig) {
     };
     let markdownLib = new markdownIt(markdownOptions);
 
-    //Add div around tables
     markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n',
     markdownLib.renderer.rules.table_close = () => '</table>\n</div>',
 

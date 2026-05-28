@@ -2,15 +2,17 @@
 layout: base.njk
 ---
 <article>
-  <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time>
-  </p>
-  
   <h1>{{ title }}</h1>
-  
   <hr/>
-  
-  {{ content | safe  }}
+  <h2>
+    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time>
+  </h2>
+  <hr/>
+
+<!-- Begin content -->  
+{{ content | safe  }}
+<!-- End content -->
+
 </article>
 
 <footer>

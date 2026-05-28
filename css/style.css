@@ -11,12 +11,17 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 2em 0 1em;
+  margin: 1em 0 1em;
   color: #4d442a;
   text-align: center;
 }
 
-p { text-align: justify;  }
+h3::before { content: "§ "; }
+
+p {
+  text-align: justify;
+  text-indent: 2em;
+}
 
 p, ul, ol {
   margin-bottom: 1em;
@@ -60,7 +65,7 @@ table { width: 100%; }
 table, th, td {
   border: thin solid black;
   border-collapse: collapse;
-  padding: 0.4rem;
+  padding: .4rem;
 }
 
 th {
@@ -77,16 +82,12 @@ hr { border: 1px solid #6b5f3b; }
 
 footer p {
   text-align: center;
+  text-indent: 0;
   font-size: .8em;
 }
 
 a, a:visited { color: #6b5f3b; }
 
 a:hover { color: #8a7a4c; }
-
-.post-meta {
-  text-align: center;
-  font-weight: bold;
-}
 
 .table-wrapper { overflow-x: auto; }
