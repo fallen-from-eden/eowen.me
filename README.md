@@ -30,4 +30,4 @@ There is no automated deployment of modified site content at this time.
 
 ## License
 
-The code for generating the site is available under the terms of the [MIT license](https://mit-license.org/). The content of the site is available under the terms of the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/). Relevant site content all exists within the `posts` directory.
+The code for generating the site is available under the terms of the [MIT license](https://mit-license.org/). The content of the site is available under the terms of the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/). See [LICENSE](./LICENSE) for more information.
