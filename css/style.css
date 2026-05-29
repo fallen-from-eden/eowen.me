@@ -16,11 +16,26 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-h2::before { content: "§ "; }
+h2::before {
+  content: "§ ";
+}
 
 p {
   text-align: justify;
   text-indent: 2em;
+}
+
+p#subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-indent: 0;
+}
+
+footer p {
+  font-size: .8em;
+  text-align: center;
+  text-indent: 0;
 }
 
 p, ul, ol {
@@ -28,9 +43,13 @@ p, ul, ol {
   margin-bottom: 1em;
 }
 
-ul, ol { padding-inline-start: 1em; }
+ul, ol {
+  padding-inline-start: 1em;
+}
 
-ul { list-style-type: none; }
+ul {
+  list-style-type: none;
+}
 
 img {
   border: thin solid black;
@@ -46,7 +65,9 @@ blockquote {
   padding: 1rem;
 }
 
-blockquote p { margin: 0; }
+blockquote p {
+  margin: 0;
+}
 
 pre {
   border: thin solid black;
@@ -54,18 +75,24 @@ pre {
   padding: 1rem;
 }
 
-code { border: thin solid black; }
+code {
+  border: thin solid black;
+}
 
 pre, code {
   background: #c8bc9a;
-  color: black;
+  color: #4d442a;
   font-family: "Fira Mono", monospace;
   font-size: .9em;
 }
 
-pre code { border: none; }
+pre code {
+  border: none;
+}
 
-table { width: 100%; }
+table {
+  width: 100%;
+}
 
 table, th, td {
   border: thin solid black;
@@ -83,23 +110,22 @@ td {
   color: #6b5f3b;
 }
 
-hr { border: 1px solid #6b5f3b; }
-
-footer p {
-  font-size: .8em;
-  text-align: center;
-  text-indent: 0;
+.table-wrapper { 
+  overflow-x: auto;
 }
 
-a, a:visited { color: #6b5f3b; }
-
-a:hover { color: #8a7a4c; }
-
-p#subtitle {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  text-indent: 0;
+hr {
+  border: 1px solid #6b5f3b;
 }
 
-.table-wrapper { overflow-x: auto; }
+a, a:visited {
+  color: #a32211;
+}
+
+footer a, footer a:visited {
+  color: #6b5f3b;
+}
+
+a:hover, footer a:hover {
+  color: #4d442a;
+}
