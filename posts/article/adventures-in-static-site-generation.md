@@ -5,6 +5,4 @@ tags:
   - article
 ---
 
-## The case for static site generation
-
-This is a test article for the site.
+## Coming soon
