@@ -26,7 +26,17 @@ Build artifacts:
 $ npm run build
 ```
 
-There is no automated deployment of modified site content at this time.
+Deploy:
+
+```
+$ bin/deploy.sh
+```
+
+To deploy to a specified rclone provider, use the `$DEST` environment variable while running the deployment script:
+
+```
+$ DEST=<provider>:<destination> bin/deploy.sh
+```
 
 ## License
 
