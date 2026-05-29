@@ -28,6 +28,8 @@ p, ul, ol {
   margin-bottom: 1em;
 }
 
+ul, ol { padding-inline-start: 1em; }
+
 ul { list-style-type: none; }
 
 img {
